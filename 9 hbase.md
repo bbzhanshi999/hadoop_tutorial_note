@@ -57,11 +57,11 @@ Hbase架构如图1所示：
 
 从图中可以看出Hbase是由Client、Zookeeper、Master、HRegionServer、HDFS等几个组件组成，下面来介绍一下几个组件的相关功能：
 
-1）Client
+1）**Client**
 
 Client包含了访问Hbase的接口，另外Client还维护了对应的cache来加速Hbase的访问，比如cache的.META.元数据的信息。
 
-2）Zookeeper
+2）**Zookeeper**
 
 HBase通过Zookeeper来做master的高可用、RegionServer的监控、元数据的入口以及集群配置的维护等工作。具体工作如下：
 
@@ -71,7 +71,7 @@ HBase通过Zookeeper来做master的高可用、RegionServer的监控、元数据
 
 通过Zoopkeeper存储元数据的统一入口地址
 
-3）Hmaster（NameNode）
+3）**Hmaster**（NameNode）
 
 master节点的主要职责如下：
 为RegionServer分配Region
@@ -80,7 +80,7 @@ master节点的主要职责如下：
 发现失效的Region，并将失效的Region分配到正常的RegionServer上
 当RegionSever失效的时候，协调对应Hlog的拆分
 
-4）HregionServer(DataNode)
+4）**HregionServer**(DataNode)
 
 HregionServer直接对接用户的读写请求，是真正的“干活”的节点。它的功能概括如下：
 管理master为其分配的Region
@@ -89,7 +89,7 @@ HregionServer直接对接用户的读写请求，是真正的“干活”的节�
 负责Region变大以后的拆分
 负责Storefile的合并工作
 
-5）HDFS
+5）**HDFS**
 
 HDFS为Hbase提供最终的底层数据存储服务，同时为HBase提供高可用（Hlog存储在HDFS）的支持，具体功能概括如下：
 提供元数据和表数据的底层分布式存储服务
