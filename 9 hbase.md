@@ -194,6 +194,15 @@ JDK1.8需要注释
 #export HBASE_REGIONSERVER_OPTS。。。
 ```
 
+> 在/etc/profile中添加HBASE_HOME环境变量
+>
+> ```sh
+> export HBASE_HOME=/opt/module/hbase-1.3.1
+> export PATH=$PATH:$HBASE_HOME/bin
+> ```
+>
+> 
+
 2）hbase-site.xml修改内容：
 
 ```xml
