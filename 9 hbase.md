@@ -407,6 +407,8 @@ hbase(main):022:0> alter 'student',{NAME=>'info',VERSIONS=>3}
 hbase(main):022:0> get 'student','1001',{COLUMN=>'info:name',VERSIONS=>3}
 ```
 
+> 实际上就是保存几个历史版本的意思，这里的设置会对info列族的数据保存最多三个版本，完成三次以上更新后，就会拿最后三次更新的数据
+
 ## 4 HBase数据结构
 
 ### 4.1 RowKey
