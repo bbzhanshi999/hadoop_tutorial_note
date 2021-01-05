@@ -911,7 +911,7 @@ $ /opt/module/hadoop-2.7.2/bin/yarn jar ~/softwares/jars/hbase-0.0.1-SNAPSHOT.ja
 
 > **提示**：运行任务前，如果待数据导入的表不存在，则需要提前创建。
 >
-> **提示**：maven打包命令：-P local clean package或-P dev clean package install（将第三方jar包一同打包，需要插件：maven-shade-plugin）
+> **提示**：maven打包命令：-P local clean package或-P dev clean package install（将第三方jar包一同打包，需要插件：maven-shade-plugin）或者使用intellij创建artifact jar打可运行jar包，
 
 #### 6.3.3 自定义HBase-MapReduce2
 
